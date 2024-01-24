@@ -9,4 +9,5 @@ const person = {
     }
 }
 
+console.log(this);
 console.log(person.fullName());
