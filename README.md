@@ -1,4 +1,4 @@
 # learn-js
 JavaScript tutorial repo
 
-Author: Akshay Chavan
+### Author: Akshay Chavan
