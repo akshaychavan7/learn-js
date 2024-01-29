@@ -10,5 +10,6 @@ function enter(event) {
 }
 
 function fillMsg() {
-    document.getElementById('msg').textContent = 'Button Clicked!'
+    const username = document.getElementById('myInp').value;
+    document.getElementById('msg').textContent = `Hello ${username}`;
 }
