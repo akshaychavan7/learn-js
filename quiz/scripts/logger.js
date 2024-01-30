@@ -9,11 +9,12 @@ logger = {
 }
 
 logObj1 = {
-    errMsg: 'This is logger 1'
+    errMsg: 'This is error from logger object 1'
 }
 
 logObj2 = {
-    errMsg: 'This is logger 2'
+    errMsg: 'This is error from logger object 2'
 }
 
 logger.logMsg.call(logObj1)
+logger.logMsg.call(logObj2)
