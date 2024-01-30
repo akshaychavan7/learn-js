@@ -1,1 +1,19 @@
 // Define a JavaScript function called logMsg() that can be used to log an error message for any object that contains the property errMsg. 
+
+logger = {
+    logMsg: function() {
+        if(this.hasOwnProperty('errMsg')) {
+            console.log(this.errMsg);
+        }
+    }
+}
+
+logObj1 = {
+    errMsg: 'This is logger 1'
+}
+
+logObj2 = {
+    errMsg: 'This is logger 2'
+}
+
+logger.logMsg.call(logObj1)
