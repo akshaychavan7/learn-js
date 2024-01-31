@@ -3,7 +3,7 @@
 logger = {
     logMsg: function() {
         if(this.hasOwnProperty('errMsg')) {
-            console.log(this.errMsg);
+            console.log(`Error message: ${this.errMsg}`);
         }
     }
 }
