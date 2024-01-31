@@ -6,16 +6,17 @@ window.onload = function hideEmail() {
     const list = document.getElementById('emails')
     list.innerHTML = '';
     result = []
+    const ulElement = document.getElementById("emails");
     for (const email of emails) {
         if(isValidEmail(email)) {
-            count = email.split('@')[0].length;
-            console.log(count, email)
-            result.push(email.replace(/[a-z|_]+@/, '*'.repeat(count)+'@'))
+            hiddenEmail = email.split('@')[0].replace(/./g,'*')+ '@' + email.split('@')[1];
+            const liElement = document.createElement('li');
+            liElement.innerText = hiddenEmail;
+            ulElement.append(liElement);
         }
     }
-    console.log(result)
 }
 
 function isValidEmail(email) {
-    return /[a-z|_]+@[a-z]+.[a-z]/.test(email)
+    return /^[a-zA-Z_0-9]+@(.+\.)*northeastern\.edu/.test(email)
 }
