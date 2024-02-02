@@ -15,7 +15,7 @@ window.onload = function() {
               list.innerHTML = '';
               myHistory.push(inp.value);
               myHistoryCopy = [...myHistory];
-              myHistoryCopy.sort();
+              myHistoryCopy.sort((a,b)=>a.length-b.length);
               // loop through the sorted array, and display all the search terms in the list
               for (const itemText of myHistoryCopy) {
                 // myHistory.push(itemText);
