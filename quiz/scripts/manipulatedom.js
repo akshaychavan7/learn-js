@@ -33,6 +33,7 @@ function createButtonNode(txt, index) {
 function handleEditTextClick(index) {
   console.log("Edit text clicked", index);
   const textCell = document.getElementById("col0-"+index);
+  textCell.classList.add("tdNode")
   console.log('textCell', textCell);
   const inputCell = document.createElement('input');
   inputCell.type="text";
